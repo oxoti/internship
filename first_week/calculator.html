@@ -4,8 +4,6 @@
 <meta charset="utf-8">
 <title>calc</title>
 <script>
-
-
 function calcADD(){
     var num1=document.getElementById('1st').value;
     var num2=document.getElementById('2nd').value;
@@ -13,12 +11,10 @@ function calcADD(){
     else return document.write('One of string contains charecters')
 return false
 }
-
 function containsNumbers(str){
   var regexp = /\d/g;
   return regexp.test(str);
 };
-
 function calcsub(){ 
    var num1=document.getElementById('1st').value;
     var num2=document.getElementById('2nd').value;
@@ -26,7 +22,6 @@ function calcsub(){
     else return document.write('One of string contains charecters')
 return false
 }
-
 function calcmul(){
     var num1=document.getElementById('1st').value;
     var num2=document.getElementById('2nd').value;
@@ -34,7 +29,6 @@ function calcmul(){
     else return document.write('One of string contains charecters')
 return false
 }
-
 function calcdiv(){
     var num1=document.getElementById('1st').value;
     var num2=document.getElementById('2nd').value;
@@ -42,14 +36,12 @@ function calcdiv(){
     else return document.write('One of string contains charecters')
 return false
 }
-
 </script>
 </head>
 <body>
 <form>
 <p>firt number<input type="text" id="1st"/></p>
 <p>second number<input type="text" id="2nd" /></p>
-
 <input type="button" onClick="calcADD()" value="+" />
 <input type="button" onClick="calcsub()" value="-" />
 <input type="button" onClick="calcmul()" value="*" />
