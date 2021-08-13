@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>calc</title>
+<script>
+
+
+function calcADD(){
+    var num1=document.getElementById('1st').value;
+    var num2=document.getElementById('2nd').value;
+    if (containsNumbers(num1)&&containsNumbers(num2)) return document.getElementById("result").innerHTML = +num1 + +num2;
+    else return document.write('One of string contains charecters')
+return false
+}
+
+function containsNumbers(str){
+  var regexp = /\d/g;
+  return regexp.test(str);
+};
+
+function calcsub(){ 
+   var num1=document.getElementById('1st').value;
+    var num2=document.getElementById('2nd').value;
+ if (containsNumbers(num1)&&containsNumbers(num2)) return document.getElementById("result").innerHTML = +num1 - +num2;
+    else return document.write('One of string contains charecters')
+return false
+}
+
+function calcmul(){
+    var num1=document.getElementById('1st').value;
+    var num2=document.getElementById('2nd').value;
+    if (containsNumbers(num1)&&containsNumbers(num2)) return document.getElementById("result").innerHTML = +num1 * +num2;
+    else return document.write('One of string contains charecters')
+return false
+}
+
+function calcdiv(){
+    var num1=document.getElementById('1st').value;
+    var num2=document.getElementById('2nd').value;
+    if (containsNumbers(num1)&&containsNumbers(num2)) return document.getElementById("result").innerHTML = +num1 / +num2;
+    else return document.write('One of string contains charecters')
+return false
+}
+
+</script>
+</head>
+<body>
+<form>
+<p>firt number<input type="text" id="1st"/></p>
+<p>second number<input type="text" id="2nd" /></p>
+
+<input type="button" onClick="calcADD()" value="+" />
+<input type="button" onClick="calcsub()" value="-" />
+<input type="button" onClick="calcmul()" value="*" />
+<input type="button" onClick="calcdiv()" value="/" />
+</form>
+<p>The Result is : <br>
+    <span id = "result"></span>
+    </p>
+</body>
+</html>
